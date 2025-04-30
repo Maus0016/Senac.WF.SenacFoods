@@ -33,8 +33,9 @@
             btnEntrar = new Button();
             txtSenha = new TextBox();
             txtLogin = new TextBox();
-            label1 = new Label();
             label2 = new Label();
+            label1 = new Label();
+            btnFechar = new Button();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
@@ -49,6 +50,7 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(btnFechar);
             panel2.Controls.Add(btnEntrar);
             panel2.Controls.Add(txtSenha);
             panel2.Controls.Add(txtLogin);
@@ -76,6 +78,7 @@
             btnEntrar.TabIndex = 2;
             btnEntrar.Text = "ENTRAR";
             btnEntrar.UseVisualStyleBackColor = false;
+            btnEntrar.Click += btnEntrar_Click;
             // 
             // txtSenha
             // 
@@ -104,6 +107,18 @@
             txtLogin.TabIndex = 0;
             txtLogin.Text = "USUARIO:";
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Stencil", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(110, 166);
+            label2.Name = "label2";
+            label2.Size = new Size(375, 35);
+            label2.TabIndex = 1;
+            label2.Text = "________________________";
+            label2.Click += label1_Click;
+            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -116,17 +131,18 @@
             label1.Text = "________________________";
             label1.Click += label1_Click;
             // 
-            // label2
+            // btnFechar
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Stencil", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(110, 165);
-            label2.Name = "label2";
-            label2.Size = new Size(375, 35);
-            label2.TabIndex = 1;
-            label2.Text = "________________________";
-            label2.Click += label1_Click;
+            btnFechar.BackColor = Color.White;
+            btnFechar.FlatAppearance.BorderSize = 0;
+            btnFechar.FlatStyle = FlatStyle.Flat;
+            btnFechar.Location = new Point(483, 12);
+            btnFechar.Name = "btnFechar";
+            btnFechar.Size = new Size(39, 34);
+            btnFechar.TabIndex = 3;
+            btnFechar.Text = "X";
+            btnFechar.UseVisualStyleBackColor = false;
+            btnFechar.Click += btnFechar_Click;
             // 
             // FormLogin
             // 
@@ -154,5 +170,6 @@
         private Button btnEntrar;
         private Label label1;
         private Label label2;
+        private Button btnFechar;
     }
 }
