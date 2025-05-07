@@ -23,13 +23,32 @@ namespace SenacFoods
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)
+        {   // true, false
+            bool loginValido = ValidarLogin(txtLogin.Text, txtSenha.Text);
+            // SE TRUE
+            if (loginValido == true)
+            {
+                //oculta a tela de Login
+                this.Hide();
+                //criar uma instancia de FrmPrincipal
+                var frmPrincipal = new FormPrincipal(txtLogin.Text, txtSenha.Text);
+                //exibe a tela principal
+                frmPrincipal.Show();
+            }
+        }
+
+        private bool ValidarLogin(string nome, string senha)
         {
-            //oculta a tela de Login
-            this.Hide();
-            //criar uma instancia de FrmPrincipal
-            var frmPrincipal = new FormPrincipal();
-            //exibe a tela principal
-            frmPrincipal.Show();
+            if(nome == "admin" && senha == "123")
+            {// Retorna Verdadeiro
+                return true;
+            }
+            else
+            {// Exibe uma mensagem de erro
+                MessageBox.Show("Login ou Senha inválidos");
+            }//Retorna falso
+                //verifica se o nome e a senha são verdadeiros
+                return false;
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
