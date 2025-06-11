@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SenacFoods
+{
+    public class Mesa
+    {
+        public int Id { get; set; }
+        public int NumeroMesa { get; set; }
+        // 0 - Disponível 1 - Ocupada 2 -  Reservada
+        public int SituacaoMesa { get; set; }
+
+
+    }
+}
