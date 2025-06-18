@@ -39,7 +39,19 @@ namespace SenacFoods
 
         private bool ValidarLogin(string nome, string senha)
         {
-            if(nome == "admin" && senha == "123")
+            bool usuarioValido = false;
+            //CONECTA O BANCO
+            using (var banco = new ComandaDBContext())
+            {
+                // CONSULTA A TABELA USUARIO SELECT = FROM USUARIOS WHERE EMAIL = ? AND SENHA =?
+                var usuario = banco
+                    .Usuarios
+                    .FirstOrDefault(u => u.Email == nome && u.Senha == senha);
+                if (usuario is not null)
+                    usuarioValido = true;
+            }
+
+            if (usuarioValido)
             {// Retorna Verdadeiro
                 return true;
             }
@@ -47,8 +59,8 @@ namespace SenacFoods
             {// Exibe uma mensagem de erro
                 MessageBox.Show("Login ou Senha inválidos");
             }//Retorna falso
-                //verifica se o nome e a senha são verdadeiros
-                return false;
+             //verifica se o nome e a senha são verdadeiros
+            return false;
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
@@ -57,6 +69,11 @@ namespace SenacFoods
             Close();
             // encerra o aplicativo
             Application.Exit();
+
+        }
+
+        private void txtLogin_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

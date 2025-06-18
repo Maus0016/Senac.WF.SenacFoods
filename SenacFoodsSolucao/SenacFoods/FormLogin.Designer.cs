@@ -30,12 +30,12 @@
         {
             panel1 = new Panel();
             panel2 = new Panel();
+            btnFechar = new Button();
             btnEntrar = new Button();
             txtSenha = new TextBox();
             txtLogin = new TextBox();
             label2 = new Label();
             label1 = new Label();
-            btnFechar = new Button();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
@@ -62,6 +62,19 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(534, 450);
             panel2.TabIndex = 1;
+            // 
+            // btnFechar
+            // 
+            btnFechar.BackColor = Color.White;
+            btnFechar.FlatAppearance.BorderSize = 0;
+            btnFechar.FlatStyle = FlatStyle.Flat;
+            btnFechar.Location = new Point(483, 12);
+            btnFechar.Name = "btnFechar";
+            btnFechar.Size = new Size(39, 34);
+            btnFechar.TabIndex = 3;
+            btnFechar.Text = "X";
+            btnFechar.UseVisualStyleBackColor = false;
+            btnFechar.Click += btnFechar_Click;
             // 
             // btnEntrar
             // 
@@ -106,6 +119,7 @@
             txtLogin.Size = new Size(415, 40);
             txtLogin.TabIndex = 0;
             txtLogin.Text = "USUARIO:";
+            txtLogin.TextChanged += txtLogin_TextChanged;
             // 
             // label2
             // 
@@ -130,19 +144,6 @@
             label1.TabIndex = 1;
             label1.Text = "________________________";
             label1.Click += label1_Click;
-            // 
-            // btnFechar
-            // 
-            btnFechar.BackColor = Color.White;
-            btnFechar.FlatAppearance.BorderSize = 0;
-            btnFechar.FlatStyle = FlatStyle.Flat;
-            btnFechar.Location = new Point(483, 12);
-            btnFechar.Name = "btnFechar";
-            btnFechar.Size = new Size(39, 34);
-            btnFechar.TabIndex = 3;
-            btnFechar.Text = "X";
-            btnFechar.UseVisualStyleBackColor = false;
-            btnFechar.Click += btnFechar_Click;
             // 
             // FormLogin
             // 
