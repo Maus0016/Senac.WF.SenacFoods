@@ -46,7 +46,7 @@ namespace SenacFoods
                 // CONSULTA A TABELA USUARIO SELECT = FROM USUARIOS WHERE EMAIL = ? AND SENHA =?
                 var usuario = banco
                     .Usuarios
-                    .FirstOrDefault(u => u.Email == nome && u.Senha == senha);
+                    .FirstOrDefault(u => u.Email == nome.ToLower() && u.Senha == senha);
                 if (usuario is not null)
                     usuarioValido = true;
             }

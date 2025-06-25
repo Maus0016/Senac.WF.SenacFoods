@@ -19,7 +19,7 @@ public class ComandaDBContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         //2.1 String de conexão
-        var conexao = "Server=localhost;Database=SenacFoods;User=root;Password=";
+        var conexao = "Server=localhost;Database=Senac_Foods;User=root;Password=";
         //2.2 Configuras o provedor de banco de dados
         optionsBuilder.UseMySql(conexao, ServerVersion.AutoDetect(conexao));
         base.OnConfiguring(optionsBuilder);
