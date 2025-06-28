@@ -33,7 +33,7 @@ namespace SenacFoods.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<bool>("PossiuPreparo")
+                    b.Property<bool>("PossuiPreparo")
                         .HasColumnType("tinyint(1)");
 
                     b.Property<decimal>("Preco")

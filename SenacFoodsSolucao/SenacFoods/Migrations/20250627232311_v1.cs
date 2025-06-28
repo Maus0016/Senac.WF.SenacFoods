@@ -25,7 +25,7 @@ namespace SenacFoods.Migrations
                     Descricao = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Preco = table.Column<decimal>(type: "decimal(65,30)", nullable: false),
-                    PossiuPreparo = table.Column<bool>(type: "tinyint(1)", nullable: false)
+                    PossuiPreparo = table.Column<bool>(type: "tinyint(1)", nullable: false)
                 },
                 constraints: table =>
                 {
