@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            button1 = new Button();
+            BtnFecha = new Button();
             label1 = new Label();
             button4 = new Button();
             BtbCancelar = new Button();
@@ -51,28 +51,29 @@
             // panel1
             // 
             panel1.BackColor = Color.DimGray;
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(BtnFecha);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(button4);
             panel1.Location = new Point(-3, -1);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1388, 143);
+            panel1.Size = new Size(1388, 104);
             panel1.TabIndex = 6;
             panel1.Tag = "";
             // 
-            // button1
+            // BtnFecha
             // 
-            button1.BackColor = Color.Black;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(1312, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(39, 40);
-            button1.TabIndex = 5;
-            button1.Text = "X";
-            button1.UseVisualStyleBackColor = false;
+            BtnFecha.BackColor = Color.Black;
+            BtnFecha.FlatAppearance.BorderSize = 0;
+            BtnFecha.FlatStyle = FlatStyle.Flat;
+            BtnFecha.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            BtnFecha.ForeColor = Color.White;
+            BtnFecha.Location = new Point(1312, 3);
+            BtnFecha.Name = "BtnFecha";
+            BtnFecha.Size = new Size(39, 40);
+            BtnFecha.TabIndex = 5;
+            BtnFecha.Text = "X";
+            BtnFecha.UseVisualStyleBackColor = false;
+            BtnFecha.Click += button1_Click;
             // 
             // label1
             // 
@@ -134,18 +135,18 @@
             groupBox1.Controls.Add(button5);
             groupBox1.Controls.Add(button7);
             groupBox1.Font = new Font("Segoe UI", 12F);
-            groupBox1.Location = new Point(-3, 150);
+            groupBox1.Location = new Point(-3, 111);
             groupBox1.Margin = new Padding(3, 5, 3, 5);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(3, 5, 3, 5);
-            groupBox1.Size = new Size(1388, 393);
+            groupBox1.Size = new Size(1388, 432);
             groupBox1.TabIndex = 9;
             groupBox1.TabStop = false;
             groupBox1.Text = "Cardapio";
             // 
             // txtDescricao
             // 
-            txtDescricao.Location = new Point(15, 124);
+            txtDescricao.Location = new Point(15, 141);
             txtDescricao.Name = "txtDescricao";
             txtDescricao.Size = new Size(465, 97);
             txtDescricao.TabIndex = 10;
@@ -153,7 +154,7 @@
             // 
             // txtPreco
             // 
-            txtPreco.Location = new Point(15, 263);
+            txtPreco.Location = new Point(15, 276);
             txtPreco.Name = "txtPreco";
             txtPreco.Size = new Size(465, 39);
             txtPreco.TabIndex = 9;
@@ -168,7 +169,7 @@
             // chkPossiuPreparo
             // 
             chkPossiuPreparo.AutoSize = true;
-            chkPossiuPreparo.Location = new Point(15, 308);
+            chkPossiuPreparo.Location = new Point(15, 345);
             chkPossiuPreparo.Name = "chkPossiuPreparo";
             chkPossiuPreparo.Size = new Size(207, 36);
             chkPossiuPreparo.TabIndex = 6;
@@ -179,7 +180,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(15, 224);
+            label4.Location = new Point(15, 241);
             label4.Name = "label4";
             label4.Size = new Size(73, 32);
             label4.TabIndex = 5;
@@ -189,7 +190,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(15, 98);
+            label3.Location = new Point(15, 106);
             label3.Name = "label3";
             label3.Size = new Size(116, 32);
             label3.TabIndex = 4;
@@ -198,7 +199,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(15, 34);
+            label2.Location = new Point(10, 34);
             label2.Name = "label2";
             label2.Size = new Size(75, 32);
             label2.TabIndex = 3;
@@ -263,5 +264,6 @@
         private RichTextBox txtDescricao;
         private TextBox txtPreco;
         private TextBox txtTitulo;
+        private Button BtnFecha;
     }
 }

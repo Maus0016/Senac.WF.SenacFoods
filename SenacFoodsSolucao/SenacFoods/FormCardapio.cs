@@ -43,9 +43,14 @@ namespace SenacFoods
             using (var bd = new ComandaDBContext())
             {
                 //consultar tabela cardapio SELECT * FROM CARDAPIO
-                var cardapios = bd.CardapioItems.ToList();
+                var cardapios = bd.CardapioItems.AsQueryable();
+                if(!string.IsNullOrEmpty(TxtPesquisa.Text) )
+                {
+                    cardapios = cardapios.Where(c=> c.Titulo.Contains(TxtPesquisa.Text) || c.Descricao.Contains(TxtPesquisa.Text));
+
+                }
                 // popular o frid com a tabela consultada
-                dataGridView1.DataSource = cardapios;
+                dataGridView1.DataSource = cardapios.ToList();
 
             }
         }
@@ -62,7 +67,39 @@ namespace SenacFoods
 
         private void button2_Click(object sender, EventArgs e)
         {
+            new FrmCardapioCad().ShowDialog();
+        }
 
+        private void btnAdicionar_Click(object sender, EventArgs e)
+        {
+            new FrmCardapioCad().ShowDialog();
+            BuscarCardapio();
+        }
+
+        private void btnEditar(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void BtnExcluir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void CardapioFechar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void TxtPesquisa_TextChanged(object sender, EventArgs e)
+        {
+            //Chamar o metodo buscar Cardapio
+            BuscarCardapio();
         }
     }
 }

@@ -55,7 +55,17 @@ namespace SenacFoods
                 banco.CardapioItems.Add(cardapio);
                 banco.SaveChanges();
                 //Salvar as alteraçoes no banco
+                MessageBox.Show("Cardapio salvo com sucesso!",
+                    "Sucesso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                this.Close();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
