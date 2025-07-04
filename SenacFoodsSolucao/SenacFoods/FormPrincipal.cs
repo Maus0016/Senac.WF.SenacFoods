@@ -64,5 +64,11 @@ namespace SenacFoods
             frmUsuarios.ShowDialog();
             // cardapio continuar o desing com os produtos 
         }
+
+        private void btnMesa_Click(object sender, EventArgs e)
+        {
+            var frmMesa = new FormMesa();
+            frmMesa.ShowDialog();
+        }
     }
 }

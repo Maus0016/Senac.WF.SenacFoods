@@ -36,11 +36,13 @@
             btnFechar = new Button();
             btnMinimizar = new Button();
             lblMensagem = new Label();
+            btnMesa = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(btnMesa);
             groupBox1.Controls.Add(btnUsuarios);
             groupBox1.Controls.Add(btnPedidoCozinha);
             groupBox1.Controls.Add(btnComanda);
@@ -48,7 +50,7 @@
             groupBox1.ForeColor = Color.White;
             groupBox1.Location = new Point(119, 96);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(647, 150);
+            groupBox1.Size = new Size(765, 150);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Senac Foods";
@@ -118,7 +120,7 @@
             btnFechar.BackColor = Color.White;
             btnFechar.FlatAppearance.BorderSize = 0;
             btnFechar.FlatStyle = FlatStyle.Flat;
-            btnFechar.Location = new Point(806, 28);
+            btnFechar.Location = new Point(922, 28);
             btnFechar.Name = "btnFechar";
             btnFechar.Size = new Size(39, 34);
             btnFechar.TabIndex = 1;
@@ -131,7 +133,7 @@
             btnMinimizar.BackColor = Color.White;
             btnMinimizar.FlatAppearance.BorderSize = 0;
             btnMinimizar.FlatStyle = FlatStyle.Flat;
-            btnMinimizar.Location = new Point(761, 28);
+            btnMinimizar.Location = new Point(864, 28);
             btnMinimizar.Name = "btnMinimizar";
             btnMinimizar.Size = new Size(39, 34);
             btnMinimizar.TabIndex = 1;
@@ -150,12 +152,27 @@
             lblMensagem.TabIndex = 2;
             lblMensagem.Text = "lblMensagem";
             // 
+            // btnMesa
+            // 
+            btnMesa.BackColor = Color.DodgerBlue;
+            btnMesa.FlatAppearance.BorderSize = 0;
+            btnMesa.FlatStyle = FlatStyle.Flat;
+            btnMesa.Font = new Font("Segoe UI", 11F);
+            btnMesa.ForeColor = Color.Black;
+            btnMesa.Location = new Point(618, 43);
+            btnMesa.Name = "btnMesa";
+            btnMesa.Size = new Size(112, 80);
+            btnMesa.TabIndex = 0;
+            btnMesa.Text = "Mesa";
+            btnMesa.UseVisualStyleBackColor = false;
+            btnMesa.Click += btnMesa_Click;
+            // 
             // FormPrincipal
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(885, 396);
+            ClientSize = new Size(1006, 396);
             Controls.Add(lblMensagem);
             Controls.Add(btnMinimizar);
             Controls.Add(btnFechar);
@@ -179,5 +196,6 @@
         private Button btnFechar;
         private Button btnMinimizar;
         private Label lblMensagem;
+        private Button btnMesa;
     }
 }
