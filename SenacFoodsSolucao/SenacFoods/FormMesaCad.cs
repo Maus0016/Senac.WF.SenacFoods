@@ -31,5 +31,15 @@ namespace SenacFoods
         {
             Close();
         }
+
+        private void btnSalvarMesa_Click(object sender, EventArgs e)
+        {
+            SalvarMesa();
+        }
+
+        private void SalvarMesa()
+        {
+            
+        }
     }
 }

@@ -16,7 +16,7 @@ namespace SenacFoods
         {
             InitializeComponent();
             // exibe o nome do usuario na tela principal
-            lblMensagem.Text = "Bem Vindo! " + nome;
+            lblMensagem.Text = "Bem Vindo! " + nome.ToLower();
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
@@ -70,5 +70,7 @@ namespace SenacFoods
             var frmMesa = new FormMesa();
             frmMesa.ShowDialog();
         }
+
+        
     }
 }

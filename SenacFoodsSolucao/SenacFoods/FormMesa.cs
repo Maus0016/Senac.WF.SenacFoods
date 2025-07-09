@@ -24,12 +24,27 @@ namespace SenacFoods
 
         private void btnNovaMesa_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void btnNovaMesa_Click_1(object sender, EventArgs e)
         {
-         
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormMesa_Load(object sender, EventArgs e)
+        {
+            BuscarMesa();
+        }
+
+        private void BuscarMesa()
+        {
+            using (var Mess = new ComandaDBContext()) ;
         }
     }
 }

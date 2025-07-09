@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            btnMesa = new Button();
             btnUsuarios = new Button();
             btnPedidoCozinha = new Button();
             btnComanda = new Button();
@@ -36,7 +37,6 @@
             btnFechar = new Button();
             btnMinimizar = new Button();
             lblMensagem = new Label();
-            btnMesa = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -54,6 +54,21 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Senac Foods";
+            // 
+            // btnMesa
+            // 
+            btnMesa.BackColor = Color.DodgerBlue;
+            btnMesa.FlatAppearance.BorderSize = 0;
+            btnMesa.FlatStyle = FlatStyle.Flat;
+            btnMesa.Font = new Font("Segoe UI", 11F);
+            btnMesa.ForeColor = Color.Black;
+            btnMesa.Location = new Point(618, 43);
+            btnMesa.Name = "btnMesa";
+            btnMesa.Size = new Size(112, 80);
+            btnMesa.TabIndex = 0;
+            btnMesa.Text = "Mesa";
+            btnMesa.UseVisualStyleBackColor = false;
+            btnMesa.Click += btnMesa_Click;
             // 
             // btnUsuarios
             // 
@@ -144,28 +159,15 @@
             // lblMensagem
             // 
             lblMensagem.AutoSize = true;
-            lblMensagem.Font = new Font("Segoe UI", 20F);
+            lblMensagem.CausesValidation = false;
+            lblMensagem.Font = new Font("Rockwell", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblMensagem.ForeColor = Color.Snow;
-            lblMensagem.Location = new Point(324, 28);
+            lblMensagem.Location = new Point(12, 28);
             lblMensagem.Name = "lblMensagem";
-            lblMensagem.Size = new Size(263, 54);
+            lblMensagem.Size = new Size(214, 36);
             lblMensagem.TabIndex = 2;
             lblMensagem.Text = "lblMensagem";
-            // 
-            // btnMesa
-            // 
-            btnMesa.BackColor = Color.DodgerBlue;
-            btnMesa.FlatAppearance.BorderSize = 0;
-            btnMesa.FlatStyle = FlatStyle.Flat;
-            btnMesa.Font = new Font("Segoe UI", 11F);
-            btnMesa.ForeColor = Color.Black;
-            btnMesa.Location = new Point(618, 43);
-            btnMesa.Name = "btnMesa";
-            btnMesa.Size = new Size(112, 80);
-            btnMesa.TabIndex = 0;
-            btnMesa.Text = "Mesa";
-            btnMesa.UseVisualStyleBackColor = false;
-            btnMesa.Click += btnMesa_Click;
+            
             // 
             // FormPrincipal
             // 

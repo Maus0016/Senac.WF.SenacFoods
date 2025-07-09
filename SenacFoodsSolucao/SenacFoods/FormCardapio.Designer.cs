@@ -30,7 +30,7 @@
         {
             groupBox1 = new GroupBox();
             dataGridView1 = new DataGridView();
-            button2 = new Button();
+            BtnEditar = new Button();
             btnAdicionar = new Button();
             BtnExcluir = new Button();
             label1 = new Label();
@@ -46,7 +46,7 @@
             // groupBox1
             // 
             groupBox1.Controls.Add(dataGridView1);
-            groupBox1.Controls.Add(button2);
+            groupBox1.Controls.Add(BtnEditar);
             groupBox1.Controls.Add(btnAdicionar);
             groupBox1.Controls.Add(BtnExcluir);
             groupBox1.Location = new Point(44, 113);
@@ -61,25 +61,30 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(52, 86);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.Size = new Size(1179, 376);
             dataGridView1.TabIndex = 3;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
-            // button2
+            // BtnEditar
             // 
-            button2.BackColor = Color.FromArgb(255, 255, 128);
-            button2.ForeColor = SystemColors.ControlText;
-            button2.Location = new Point(1096, 513);
-            button2.Margin = new Padding(3, 5, 3, 5);
-            button2.Name = "button2";
-            button2.Size = new Size(168, 52);
-            button2.TabIndex = 2;
-            button2.Text = "Editar";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += btnEditar;
+            BtnEditar.BackColor = Color.FromArgb(255, 255, 128);
+            BtnEditar.Enabled = false;
+            BtnEditar.ForeColor = SystemColors.ControlText;
+            BtnEditar.Location = new Point(1096, 513);
+            BtnEditar.Margin = new Padding(3, 5, 3, 5);
+            BtnEditar.Name = "BtnEditar";
+            BtnEditar.Size = new Size(168, 52);
+            BtnEditar.TabIndex = 2;
+            BtnEditar.Text = "Editar";
+            BtnEditar.UseVisualStyleBackColor = false;
+            BtnEditar.Click += BtnEditar_Click;
             // 
             // btnAdicionar
             // 
@@ -185,7 +190,7 @@
         #endregion
 
         private GroupBox groupBox1;
-        private Button button2;
+        private Button BtnEditar;
         private Button BtnExcluir;
         private Label label1;
         private TextBox TxtPesquisa;

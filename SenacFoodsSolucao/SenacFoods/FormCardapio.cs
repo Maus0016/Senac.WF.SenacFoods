@@ -12,6 +12,7 @@ namespace SenacFoods
 {
     public partial class FormCardapio : Form
     {
+        CardapioItem? cardapioSelecionado;
         public FormCardapio()
         {
             InitializeComponent();
@@ -44,9 +45,9 @@ namespace SenacFoods
             {
                 //consultar tabela cardapio SELECT * FROM CARDAPIO
                 var cardapios = bd.CardapioItems.AsQueryable();
-                if(!string.IsNullOrEmpty(TxtPesquisa.Text) )
+                if (!string.IsNullOrEmpty(TxtPesquisa.Text))
                 {
-                    cardapios = cardapios.Where(c=> c.Titulo.Contains(TxtPesquisa.Text) || c.Descricao.Contains(TxtPesquisa.Text));
+                    cardapios = cardapios.Where(c => c.Titulo.Contains(TxtPesquisa.Text) || c.Descricao.Contains(TxtPesquisa.Text));
 
                 }
                 // popular o frid com a tabela consultada
@@ -88,18 +89,60 @@ namespace SenacFoods
 
         private void BtnExcluir_Click(object sender, EventArgs e)
         {
-            Close();
+            if (cardapioSelecionado != null)
+            {
+                using (var bancoDeDados = new ComandaDBContext())
+                {
+                    bancoDeDados.CardapioItems.Remove(cardapioSelecionado);
+                    bancoDeDados.SaveChanges();
+                }
+                MessageBox.Show("Cardapio excluido com sucesso!", "Sucesso",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                BuscarCardapio();
+                cardapioSelecionado = null;
+            }
+            else
+            {
+                MessageBox.Show("Selecione um cardapio para excluir", "Aviso",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
-        private void CardapioFechar_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
+                private void CardapioFechar_Click(object sender, EventArgs e)
+                {
+                    Close();
+                }
 
         private void TxtPesquisa_TextChanged(object sender, EventArgs e)
         {
             //Chamar o metodo buscar Cardapio
             BuscarCardapio();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                //pegar o cardapio selecionado
+                 cardapioSelecionado = dataGridView1.Rows[e.RowIndex].DataBoundItem as CardapioItem;
+                btnEditar.Enabled = true;
+
+              
+            }
+
+        }
+
+        private void BtnEditar_Click(object sender, EventArgs e)
+        {
+            if (cardapioSelecionado != null)
+            {
+                //abrir o formulario de edição
+                var banana = new FrmCardapioCad(cardapioSelecionado);
+                banana.ShowDialog();
+                //Atualizar a lista de cardapios
+                BuscarCardapio();
+                cardapioSelecionado = null;
+            }
         }
     }
 }

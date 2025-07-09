@@ -17,6 +17,10 @@ namespace SenacFoods
             InitializeComponent();
         }
 
+        public FrmCardapioCad(CardapioItem cardapioItem)
+        {
+            InitializeComponent();
+        }
         private void label4_Click(object sender, EventArgs e)
         {
 

@@ -107,10 +107,11 @@
             groupBox1.Margin = new Padding(3, 5, 3, 5);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(3, 5, 3, 5);
-            groupBox1.Size = new Size(1140, 448);
+            groupBox1.Size = new Size(1114, 448);
             groupBox1.TabIndex = 7;
             groupBox1.TabStop = false;
             groupBox1.Text = "Mesa";
+            groupBox1.Enter += groupBox1_Enter;
             // 
             // dataGridView1
             // 
@@ -167,6 +168,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormMesa";
             Text = "FormMesa";
+            Load += FormMesa_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             groupBox1.ResumeLayout(false);
