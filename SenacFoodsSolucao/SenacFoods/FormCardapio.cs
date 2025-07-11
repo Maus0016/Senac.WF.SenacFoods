@@ -125,7 +125,7 @@ namespace SenacFoods
             {
                 //pegar o cardapio selecionado
                  cardapioSelecionado = dataGridView1.Rows[e.RowIndex].DataBoundItem as CardapioItem;
-                btnEditar.Enabled = true;
+                BtnEditar.Enabled = true;
 
               
             }
