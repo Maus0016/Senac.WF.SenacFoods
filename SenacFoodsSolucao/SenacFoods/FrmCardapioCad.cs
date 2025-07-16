@@ -52,23 +52,23 @@ namespace SenacFoods
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            if( _cardapioItem == null) 
+            if (_cardapioItem == null)
             {
                 InserirCardapio();
-            
+
             }
             //Atualizar
             else
             {
                 AtualizarCardapio();
             }
-                
+
 
         }
 
         private void AtualizarCardapio()
         {
-            using(var banco = new ComandaDBContext())
+            using (var banco = new ComandaDBContext())
             {
                 //Captar aos dados da tela
                 string titulo = txtTitulo.Text;
@@ -77,7 +77,7 @@ namespace SenacFoods
                 bool possuiPreparo = chkPossiuPreparo.Checked;
                 //Atualizar o cardapio
                 var cardapioItem = banco.CardapioItems.First(x => x.Id == _cardapioItem.Id);
-                cardapioItem .Titulo = titulo;
+                cardapioItem.Titulo = titulo;
                 cardapioItem.Descricao = descricao;
                 cardapioItem.Preco = preco;
                 cardapioItem.PossuiPreparo = possuiPreparo;
@@ -128,6 +128,11 @@ namespace SenacFoods
         }
 
         private void txtTitulo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPreco_TextChanged(object sender, EventArgs e)
         {
 
         }

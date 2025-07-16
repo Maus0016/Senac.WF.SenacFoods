@@ -158,6 +158,7 @@
             txtPreco.Name = "txtPreco";
             txtPreco.Size = new Size(465, 39);
             txtPreco.TabIndex = 9;
+            txtPreco.TextChanged += txtPreco_TextChanged;
             // 
             // txtTitulo
             // 

@@ -12,21 +12,27 @@ namespace SenacFoods
 {
     public partial class FormMesaCad : Form
     {
+        private FormMesaCad _mesaCad;
         public FormMesaCad()
         {
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        public FormMesaCad(MesaCad _mesaCad)
         {
+            _mesaCad = MesaCad;
+            InitializeComponent();
 
+            CarregarDadosDaTela();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void CarregarDadosDaTela()
         {
-
+            if (_mesaCad != null)
+            {
+                txtTitulo.Text = _mesaCad.txtTitulo;
+            }
         }
-
         private void BtnFecharMesaCad_Click(object sender, EventArgs e)
         {
             Close();
@@ -34,7 +40,26 @@ namespace SenacFoods
 
         private void btnSalvarMesa_Click(object sender, EventArgs e)
         {
-            SalvarMesa();
+            if(_mesaCad == null) 
+            {
+                SalvarMesa();
+            }
+            else
+            {
+                AtualizarMesa();
+            }
+        }
+
+        private void AtualizarMesa()
+        {
+            using (var bancoMesa = new ComandaDBContext())
+            {
+                string titulo = txtTitulo.Text;
+
+                var MesaCad = bancoMesa.MesaCad.First(M => M.Id == _mesaCad.GetAccessibilityObjectById);
+                
+                bancoMesa.MesaCad)
+            }
         }
 
         private void SalvarMesa()
@@ -45,6 +70,19 @@ namespace SenacFoods
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtTitulo_TextChanged(object sender, EventArgs e)
+        {
+            using (var bancodb = new ComandaDBContext())
+            {
+                string titulo = txtTitulo.Text;
+
+                var Mesa = new MesaCad()
+                {
+                    titulo = MesaCad.Update()
+                };
+            }
         }
     }
 }

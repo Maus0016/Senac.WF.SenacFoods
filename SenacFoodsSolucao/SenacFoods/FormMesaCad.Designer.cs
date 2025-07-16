@@ -104,7 +104,7 @@
             groupBox1.Controls.Add(button5);
             groupBox1.Controls.Add(button7);
             groupBox1.Font = new Font("Segoe UI", 12F);
-            groupBox1.Location = new Point(1, 110);
+            groupBox1.Location = new Point(2, 110);
             groupBox1.Margin = new Padding(3, 5, 3, 5);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(3, 5, 3, 5);
@@ -130,6 +130,7 @@
             txtTitulo.Name = "txtTitulo";
             txtTitulo.Size = new Size(465, 39);
             txtTitulo.TabIndex = 7;
+            txtTitulo.TextChanged += txtTitulo_TextChanged;
             // 
             // label2
             // 
