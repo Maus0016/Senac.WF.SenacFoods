@@ -96,6 +96,7 @@
             TxtPesquisa.Name = "TxtPesquisa";
             TxtPesquisa.Size = new Size(762, 31);
             TxtPesquisa.TabIndex = 2;
+            TxtPesquisa.TextChanged += TxtPesquisa_TextChanged;
             // 
             // groupBox1
             // 
@@ -103,7 +104,7 @@
             groupBox1.Controls.Add(btEditarMesa);
             groupBox1.Controls.Add(btnNovaMesa);
             groupBox1.Controls.Add(BtnExcluirMesa);
-            groupBox1.Location = new Point(3, 109);
+            groupBox1.Location = new Point(6, 109);
             groupBox1.Margin = new Padding(3, 5, 3, 5);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(3, 5, 3, 5);
@@ -121,6 +122,7 @@
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.Size = new Size(1041, 257);
             dataGridView1.TabIndex = 3;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // btEditarMesa
             // 
@@ -133,6 +135,7 @@
             btEditarMesa.TabIndex = 2;
             btEditarMesa.Text = "Editar";
             btEditarMesa.UseVisualStyleBackColor = false;
+            btEditarMesa.Click += btEditarMesa_Click;
             // 
             // btnNovaMesa
             // 
@@ -145,7 +148,7 @@
             btnNovaMesa.TabIndex = 1;
             btnNovaMesa.Text = "Nova Mesa ";
             btnNovaMesa.UseVisualStyleBackColor = false;
-            btnNovaMesa.Click += btnNovaMesa_Click_1;
+            btnNovaMesa.Click += btnNovaMesa_Click;
             // 
             // BtnExcluirMesa
             // 
@@ -157,6 +160,7 @@
             BtnExcluirMesa.TabIndex = 1;
             BtnExcluirMesa.Text = "Excluir";
             BtnExcluirMesa.UseVisualStyleBackColor = false;
+            BtnExcluirMesa.Click += BtnExcluirMesa_Click;
             // 
             // FormMesa
             // 

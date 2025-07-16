@@ -12,6 +12,7 @@ namespace SenacFoods
 {
     public partial class FormMesa : Form
     {
+        Mesa? mesaSelecionada;
         public FormMesa()
         {
             InitializeComponent();
@@ -24,12 +25,8 @@ namespace SenacFoods
 
         private void btnNovaMesa_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnNovaMesa_Click_1(object sender, EventArgs e)
-        {
-
+            new FormMesaCad().ShowDialog();
+            BuscarMesa();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -44,7 +41,60 @@ namespace SenacFoods
 
         private void BuscarMesa()
         {
-            using (var Mess = new ComandaDBContext()) ;
+            using (var bd = new ComandaDBContext())
+            {
+                var Mesas = bd.Mesas.AsQueryable();
+                if (!string.IsNullOrEmpty(TxtPesquisa.Text))
+                {
+                    Mesas = Mesas
+                        .Where(m => m.NumeroMesa == int.Parse(TxtPesquisa.Text));
+                }
+                dataGridView1.DataSource = Mesas.ToList();
+            }
+        }
+
+        private void TxtPesquisa_TextChanged(object sender, EventArgs e)
+        {
+            BuscarMesa();
+        }
+
+        private void BtnExcluirMesa_Click(object sender, EventArgs e)
+        {
+            if (mesaSelecionada != null)
+            {
+                using (var bancoDeDado = new ComandaDBContext())
+                {
+                    bancoDeDado.Mesas.Remove(mesaSelecionada);
+                    bancoDeDado.SaveChanges();
+                }
+                MessageBox.Show("Mesa excluida com sucesso!", "Sucesso",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                BuscarMesa();
+                mesaSelecionada = null;
+            }
+            else
+            {
+                MessageBox.Show("Selecione uma mesa para excluir", "Aviso",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btEditarMesa_Click(object sender, EventArgs e)
+        {
+            if (mesaSelecionada != null)
+            {
+                var messs = new FormMesaCad(mesaSelecionada);
+                messs.ShowDialog();
+                BuscarMesa();
+                mesaSelecionada = null;
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex >= 0) 
+            {
+                mesaSelecionada = dataGridView1.Rows[e.RowIndex].DataBoundItem as Mesa;
+                BtnEditarMesa.Enabled = true;
         }
     }
-}
