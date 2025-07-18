@@ -136,5 +136,10 @@ namespace SenacFoods
         {
 
         }
+
+        private void BtbCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

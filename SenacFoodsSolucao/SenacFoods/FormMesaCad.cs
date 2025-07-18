@@ -18,9 +18,9 @@ namespace SenacFoods
             InitializeComponent();
         }
 
-        public FormMesaCad(MesaCad _mesaCad)
+        public FormMesaCad(MesaCad mesaCad)
         {
-            _mesaCad = MesaCad;
+            _mesaCad = mesaCad;
             InitializeComponent();
 
             CarregarDadosDaTela();
@@ -30,7 +30,7 @@ namespace SenacFoods
         {
             if (_mesaCad != null)
             {
-                txtTitulo.Text = _mesaCad.txtTitulo;
+                txtTitulo.Text = _mesaCad.ToString();
             }
         }
         private void BtnFecharMesaCad_Click(object sender, EventArgs e)
@@ -40,7 +40,7 @@ namespace SenacFoods
 
         private void btnSalvarMesa_Click(object sender, EventArgs e)
         {
-            if(_mesaCad == null) 
+            if (_mesaCad == null)
             {
                 SalvarMesa();
             }
@@ -56,10 +56,16 @@ namespace SenacFoods
             {
                 string titulo = txtTitulo.Text;
 
-                var MesaCad = bancoMesa.MesaCad.First(M => M.Id == _mesaCad.GetAccessibilityObjectById);
-                
-                bancoMesa.MesaCad)
+                var MesaCad = bancoMesa.Mesas.First(M => M.Id == _mesaCad.Id);
+
+                bancoMesa.Mesas)
+                    bancoMesa.Mesas.Update(MesaCad);
+                bancoMesa.SaveChanges();
             }
+            MessageBox.Show("Mesa atualizada com sucesso!", "Sucesso",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+            this.Close();
         }
 
         private void SalvarMesa()
@@ -83,6 +89,11 @@ namespace SenacFoods
                     titulo = MesaCad.Update()
                 };
             }
+        }
+
+        private void BtnCanselarMesa_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

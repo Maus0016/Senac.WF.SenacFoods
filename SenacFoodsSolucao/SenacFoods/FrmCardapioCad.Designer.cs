@@ -109,6 +109,7 @@
             BtbCancelar.TabIndex = 7;
             BtbCancelar.Text = "Cancelar";
             BtbCancelar.UseVisualStyleBackColor = false;
+            BtbCancelar.Click += BtbCancelar_Click;
             // 
             // BtnSalvar
             // 
