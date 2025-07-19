@@ -12,15 +12,15 @@ namespace SenacFoods
 {
     public partial class FormMesaCad : Form
     {
-        private FormMesaCad _mesaCad;
+        private MesaCad _mesa;
         public FormMesaCad()
         {
             InitializeComponent();
         }
 
-        public FormMesaCad(MesaCad mesaCad)
+        public FormMesaCad(MesaCad _mesaCad)
         {
-            _mesaCad = mesaCad;
+            _mesaCad = mesa;
             InitializeComponent();
 
             CarregarDadosDaTela();
@@ -28,9 +28,9 @@ namespace SenacFoods
 
         private void CarregarDadosDaTela()
         {
-            if (_mesaCad != null)
+            if (_mesa != null)
             {
-                txtTitulo.Text = _mesaCad.ToString();
+                txtTitulo.Text = _mesa.ToString();
             }
         }
         private void BtnFecharMesaCad_Click(object sender, EventArgs e)
@@ -40,7 +40,7 @@ namespace SenacFoods
 
         private void btnSalvarMesa_Click(object sender, EventArgs e)
         {
-            if (_mesaCad == null)
+            if (_mesa == null)
             {
                 SalvarMesa();
             }
@@ -54,11 +54,12 @@ namespace SenacFoods
         {
             using (var bancoMesa = new ComandaDBContext())
             {
+                int.TryParse(txtTitulo.Text, out int numeroMesa);
                 string titulo = txtTitulo.Text;
 
-                var MesaCad = bancoMesa.Mesas.First(M => M.Id == _mesaCad.Id);
+                var MesaCad = bancoMesa.Mesas.First(M => M.Id == _mesa.Id);
+                titulo.mesaCad = numeroMesa;
 
-                bancoMesa.Mesas)
                     bancoMesa.Mesas.Update(MesaCad);
                 bancoMesa.SaveChanges();
             }
@@ -71,24 +72,6 @@ namespace SenacFoods
         private void SalvarMesa()
         {
 
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtTitulo_TextChanged(object sender, EventArgs e)
-        {
-            using (var bancodb = new ComandaDBContext())
-            {
-                string titulo = txtTitulo.Text;
-
-                var Mesa = new MesaCad()
-                {
-                    titulo = MesaCad.Update()
-                };
-            }
         }
 
         private void BtnCanselarMesa_Click(object sender, EventArgs e)

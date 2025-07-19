@@ -97,7 +97,6 @@
             // 
             txtSenha.BackColor = Color.Silver;
             txtSenha.BorderStyle = BorderStyle.None;
-            txtSenha.CharacterCasing = CharacterCasing.Upper;
             txtSenha.Font = new Font("Segoe UI", 15F);
             txtSenha.ForeColor = Color.White;
             txtSenha.Location = new Point(119, 151);
@@ -105,21 +104,18 @@
             txtSenha.Size = new Size(415, 40);
             txtSenha.TabIndex = 0;
             txtSenha.Text = "SENHA:";
-            txtSenha.TextChanged += textBox2_TextChanged;
             // 
             // txtLogin
             // 
             txtLogin.BackColor = Color.Silver;
             txtLogin.BorderStyle = BorderStyle.None;
-            txtLogin.CharacterCasing = CharacterCasing.Upper;
             txtLogin.Font = new Font("Segoe UI", 15F);
             txtLogin.ForeColor = Color.White;
             txtLogin.Location = new Point(119, 96);
             txtLogin.Name = "txtLogin";
             txtLogin.Size = new Size(415, 40);
             txtLogin.TabIndex = 0;
-            txtLogin.Text = "USUARIO:";
-            txtLogin.TextChanged += txtLogin_TextChanged;
+            txtLogin.Text = "USUARIO";
             // 
             // label2
             // 
@@ -131,7 +127,6 @@
             label2.Size = new Size(375, 35);
             label2.TabIndex = 1;
             label2.Text = "________________________";
-            label2.Click += label1_Click;
             // 
             // label1
             // 
@@ -143,7 +138,6 @@
             label1.Size = new Size(375, 35);
             label1.TabIndex = 1;
             label1.Text = "________________________";
-            label1.Click += label1_Click;
             // 
             // FormLogin
             // 

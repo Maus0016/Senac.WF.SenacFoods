@@ -6,27 +6,11 @@ namespace SenacFoods
         {
             InitializeComponent();
         }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnEntrar_Click(object sender, EventArgs e)
         {   // true, false
             bool loginValido = ValidarLogin(txtLogin.Text, txtSenha.Text);
             // SE TRUE
-            if (loginValido == true)
+            if (loginValido)
             {
                 //oculta a tela de Login
                 this.Hide();
@@ -69,11 +53,6 @@ namespace SenacFoods
             Close();
             // encerra o aplicativo
             Application.Exit();
-
-        }
-
-        private void txtLogin_TextChanged(object sender, EventArgs e)
-        {
 
         }
     }

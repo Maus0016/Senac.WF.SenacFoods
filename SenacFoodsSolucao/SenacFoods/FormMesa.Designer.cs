@@ -112,7 +112,7 @@
             groupBox1.TabIndex = 7;
             groupBox1.TabStop = false;
             groupBox1.Text = "Mesa";
-            groupBox1.Enter += groupBox1_Enter;
+            
             // 
             // dataGridView1
             // 
