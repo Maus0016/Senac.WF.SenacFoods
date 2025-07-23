@@ -49,7 +49,7 @@
             groupBox1.Controls.Add(BtnEditar);
             groupBox1.Controls.Add(btnAdicionar);
             groupBox1.Controls.Add(BtnExcluir);
-            groupBox1.Location = new Point(44, 113);
+            groupBox1.Location = new Point(43, 113);
             groupBox1.Margin = new Padding(3, 5, 3, 5);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(3, 5, 3, 5);
@@ -57,7 +57,6 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Cardapio";
-           
             // 
             // dataGridView1
             // 

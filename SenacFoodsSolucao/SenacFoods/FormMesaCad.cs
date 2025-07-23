@@ -12,15 +12,15 @@ namespace SenacFoods
 {
     public partial class FormMesaCad : Form
     {
-        private MesaCad _mesa;
+        private Mesa _mesa;
         public FormMesaCad()
         {
             InitializeComponent();
         }
 
-        public FormMesaCad(MesaCad _mesaCad)
+        public FormMesaCad(Mesa mesa)
         {
-            _mesaCad = mesa;
+            _mesa = mesa;
             InitializeComponent();
 
             CarregarDadosDaTela();
@@ -30,7 +30,7 @@ namespace SenacFoods
         {
             if (_mesa != null)
             {
-                txtTitulo.Text = _mesa.ToString();
+                txtNumeroMesa.Text = _mesa.ToString();
             }
         }
         private void BtnFecharMesaCad_Click(object sender, EventArgs e)
@@ -54,14 +54,12 @@ namespace SenacFoods
         {
             using (var bancoMesa = new ComandaDBContext())
             {
-                int.TryParse(txtTitulo.Text, out int numeroMesa);
-                string titulo = txtTitulo.Text;
+                int.TryParse(txtNumeroMesa.Text, out int numeroMesa);
+                string titulo = txtNumeroMesa.Text;
 
-                var MesaCad = bancoMesa.Mesas.First(M => M.Id == _mesa.Id);
-                titulo.mesaCad = numeroMesa;
-
-                    bancoMesa.Mesas.Update(MesaCad);
-                bancoMesa.SaveChanges();
+                var mesa = bancoMesa.Mesas.First(M => M.Id == _mesa.Id);
+                 bancoMesa.Mesas.Update(mesa);
+                 bancoMesa.SaveChanges();
             }
             MessageBox.Show("Mesa atualizada com sucesso!", "Sucesso",
                 MessageBoxButtons.OK,
@@ -70,10 +68,33 @@ namespace SenacFoods
         }
 
         private void SalvarMesa()
-        {
+        { 
+            //Conectar
+            using (var banco = new ComandaDBContext())
+            {
+                //Captar os dados da tela
+                string NumeroMesa = txtNumeroMesa.Text;
+               
+                //Criar um novo carpadio
+                var mesa = new Mesa()
+                {
+                    //Por ser numero inteiro, é necessário converter o texto para inteiro
+                    NumeroMesa = int.Parse(NumeroMesa)
 
+                };
+                //adicionar o cardapio
+                banco.Mesas.Add(mesa);
+                banco.SaveChanges();
+                //Salvar as alteraçoes no banco
+                MessageBox.Show("Mesa salva com sucesso!",
+                    "Sucesso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                this.Close();
+            }
         }
-
+        
+        
         private void BtnCanselarMesa_Click(object sender, EventArgs e)
         {
             Close();

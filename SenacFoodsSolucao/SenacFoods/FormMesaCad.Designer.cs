@@ -34,7 +34,7 @@
             button4 = new Button();
             groupBox1 = new GroupBox();
             label4 = new Label();
-            txtTitulo = new TextBox();
+            txtNumeroMesa = new TextBox();
             label2 = new Label();
             button5 = new Button();
             button7 = new Button();
@@ -99,7 +99,7 @@
             // 
             groupBox1.BackColor = SystemColors.ControlLight;
             groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(txtTitulo);
+            groupBox1.Controls.Add(txtNumeroMesa);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(button5);
             groupBox1.Controls.Add(button7);
@@ -112,7 +112,6 @@
             groupBox1.TabIndex = 10;
             groupBox1.TabStop = false;
             groupBox1.Text = "Mesa";
-           
             // 
             // label4
             // 
@@ -124,13 +123,12 @@
             label4.Tag = "";
             label4.Text = "Numero da Mesa";
             // 
-            // txtTitulo
+            // txtNumeroMesa
             // 
-            txtTitulo.Location = new Point(15, 66);
-            txtTitulo.Name = "txtTitulo";
-            txtTitulo.Size = new Size(465, 39);
-            txtTitulo.TabIndex = 7;
-            txtTitulo.TextChanged += txtTitulo_TextChanged;
+            txtNumeroMesa.Location = new Point(15, 66);
+            txtNumeroMesa.Name = "txtNumeroMesa";
+            txtNumeroMesa.Size = new Size(465, 39);
+            txtNumeroMesa.TabIndex = 7;
             // 
             // label2
             // 
@@ -215,7 +213,7 @@
         private GroupBox groupBox1;
         private Button button5;
         private Button button7;
-        private TextBox txtTitulo;
+        private TextBox txtNumeroMesa;
         private Label label2;
         private Label label4;
         private Button BtnCanselarMesa;

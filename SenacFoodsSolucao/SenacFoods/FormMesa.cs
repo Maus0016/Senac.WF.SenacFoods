@@ -28,7 +28,7 @@ namespace SenacFoods
             new FormMesaCad().ShowDialog();
             BuscarMesa();
         }
-         private void FormMesa_Load(object sender, EventArgs e)
+        private void FormMesa_Load(object sender, EventArgs e)
         {
             BuscarMesa();
         }
@@ -89,7 +89,8 @@ namespace SenacFoods
             if (e.RowIndex >= 0)
             {
                 mesaSelecionada = dataGridView1.Rows[e.RowIndex].DataBoundItem as Mesa;
-                BtnEditarMesa.Enabled = true;
+                btEditarMesa.Enabled = true;
             }
         }
     }
+}
