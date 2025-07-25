@@ -62,7 +62,7 @@
             UsuarioFechar.Location = new Point(982, 14);
             UsuarioFechar.Name = "UsuarioFechar";
             UsuarioFechar.Size = new Size(46, 51);
-            UsuarioFechar.TabIndex = 5;
+            UsuarioFechar.TabIndex = 4;
             UsuarioFechar.Text = "x";
             UsuarioFechar.UseVisualStyleBackColor = true;
             UsuarioFechar.Click += UsuarioFechar_Click;
@@ -97,7 +97,7 @@
             TxtPesquisaDeUsuario.Margin = new Padding(3, 5, 3, 5);
             TxtPesquisaDeUsuario.Name = "TxtPesquisaDeUsuario";
             TxtPesquisaDeUsuario.Size = new Size(697, 31);
-            TxtPesquisaDeUsuario.TabIndex = 2;
+            TxtPesquisaDeUsuario.TabIndex = 0;
             TxtPesquisaDeUsuario.TextChanged += TxtPesquisaDeUsuario_TextChanged;
             // 
             // groupBox1
@@ -126,7 +126,7 @@
             btnEditarIUsuario.Margin = new Padding(3, 5, 3, 5);
             btnEditarIUsuario.Name = "btnEditarIUsuario";
             btnEditarIUsuario.Size = new Size(168, 52);
-            btnEditarIUsuario.TabIndex = 9;
+            btnEditarIUsuario.TabIndex = 3;
             btnEditarIUsuario.Text = "Editar";
             btnEditarIUsuario.UseVisualStyleBackColor = false;
             btnEditarIUsuario.Click += btnEditarIUsuario_Click;
@@ -138,7 +138,7 @@
             btnExcluirUsuario.Margin = new Padding(3, 5, 3, 5);
             btnExcluirUsuario.Name = "btnExcluirUsuario";
             btnExcluirUsuario.Size = new Size(168, 52);
-            btnExcluirUsuario.TabIndex = 8;
+            btnExcluirUsuario.TabIndex = 2;
             btnExcluirUsuario.Text = "Excluir";
             btnExcluirUsuario.UseVisualStyleBackColor = false;
             btnExcluirUsuario.Click += btnExcluirUsuario_Click;
@@ -153,7 +153,7 @@
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.Size = new Size(910, 248);
-            dataGridView1.TabIndex = 3;
+            dataGridView1.TabIndex = 5;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // BtnEditar

@@ -40,7 +40,7 @@
             txtSenhaDoUsuario = new TextBox();
             label5 = new Label();
             txtConfirmarSenha = new TextBox();
-            comboBox1 = new ComboBox();
+            Perfil = new ComboBox();
             label6 = new Label();
             sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
             btnCancelarUsuario = new Button();
@@ -70,7 +70,7 @@
             BtnFecharUsuarioCad.Location = new Point(1175, 3);
             BtnFecharUsuarioCad.Name = "BtnFecharUsuarioCad";
             BtnFecharUsuarioCad.Size = new Size(39, 40);
-            BtnFecharUsuarioCad.TabIndex = 5;
+            BtnFecharUsuarioCad.TabIndex = 7;
             BtnFecharUsuarioCad.Text = "X";
             BtnFecharUsuarioCad.UseVisualStyleBackColor = false;
             BtnFecharUsuarioCad.Click += BtnFecharUsuarioCad_Click;
@@ -114,7 +114,7 @@
             txtNomeDoUsuario.Location = new Point(26, 142);
             txtNomeDoUsuario.Name = "txtNomeDoUsuario";
             txtNomeDoUsuario.Size = new Size(333, 31);
-            txtNomeDoUsuario.TabIndex = 13;
+            txtNomeDoUsuario.TabIndex = 0;
             // 
             // label2
             // 
@@ -131,7 +131,7 @@
             txtEmail.Location = new Point(26, 211);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(333, 31);
-            txtEmail.TabIndex = 15;
+            txtEmail.TabIndex = 1;
             // 
             // label3
             // 
@@ -148,7 +148,7 @@
             txtSenhaDoUsuario.Location = new Point(26, 287);
             txtSenhaDoUsuario.Name = "txtSenhaDoUsuario";
             txtSenhaDoUsuario.Size = new Size(333, 31);
-            txtSenhaDoUsuario.TabIndex = 17;
+            txtSenhaDoUsuario.TabIndex = 2;
             // 
             // label5
             // 
@@ -165,16 +165,16 @@
             txtConfirmarSenha.Location = new Point(26, 357);
             txtConfirmarSenha.Name = "txtConfirmarSenha";
             txtConfirmarSenha.Size = new Size(333, 31);
-            txtConfirmarSenha.TabIndex = 19;
+            txtConfirmarSenha.TabIndex = 3;
             // 
-            // comboBox1
+            // Perfil
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Dono", "Gênercia", "Colaborador", "Cliente" });
-            comboBox1.Location = new Point(26, 419);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(182, 33);
-            comboBox1.TabIndex = 20;
+            Perfil.FormattingEnabled = true;
+            Perfil.Items.AddRange(new object[] { "Dono", "Gênercia", "Colaborador", "Cliente" });
+            Perfil.Location = new Point(26, 419);
+            Perfil.Name = "Perfil";
+            Perfil.Size = new Size(182, 33);
+            Perfil.TabIndex = 4;
             // 
             // label6
             // 
@@ -198,7 +198,7 @@
             btnCancelarUsuario.Margin = new Padding(3, 5, 3, 5);
             btnCancelarUsuario.Name = "btnCancelarUsuario";
             btnCancelarUsuario.Size = new Size(168, 52);
-            btnCancelarUsuario.TabIndex = 22;
+            btnCancelarUsuario.TabIndex = 5;
             btnCancelarUsuario.Text = "Cancelar";
             btnCancelarUsuario.UseVisualStyleBackColor = false;
             btnCancelarUsuario.Click += btnCancelarUsuario_Click;
@@ -211,7 +211,7 @@
             btnSalvarUsuario.Margin = new Padding(3, 5, 3, 5);
             btnSalvarUsuario.Name = "btnSalvarUsuario";
             btnSalvarUsuario.Size = new Size(168, 52);
-            btnSalvarUsuario.TabIndex = 23;
+            btnSalvarUsuario.TabIndex = 6;
             btnSalvarUsuario.Text = "Salvar";
             btnSalvarUsuario.UseVisualStyleBackColor = false;
             btnSalvarUsuario.Click += btnSalvarUsuario_Click;
@@ -224,7 +224,7 @@
             Controls.Add(btnSalvarUsuario);
             Controls.Add(btnCancelarUsuario);
             Controls.Add(label6);
-            Controls.Add(comboBox1);
+            Controls.Add(Perfil);
             Controls.Add(txtConfirmarSenha);
             Controls.Add(label5);
             Controls.Add(txtSenhaDoUsuario);
@@ -257,7 +257,7 @@
         private TextBox txtSenhaDoUsuario;
         private Label label5;
         private TextBox txtConfirmarSenha;
-        private ComboBox comboBox1;
+        private ComboBox Perfil;
         private Label label6;
         private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
         private Button btnCancelarUsuario;

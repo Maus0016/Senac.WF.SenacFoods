@@ -70,7 +70,7 @@
             BtnFecha.Location = new Point(1312, 3);
             BtnFecha.Name = "BtnFecha";
             BtnFecha.Size = new Size(39, 40);
-            BtnFecha.TabIndex = 5;
+            BtnFecha.TabIndex = 6;
             BtnFecha.Text = "X";
             BtnFecha.UseVisualStyleBackColor = false;
             BtnFecha.Click += button1_Click;
@@ -106,7 +106,7 @@
             BtbCancelar.Margin = new Padding(3, 5, 3, 5);
             BtbCancelar.Name = "BtbCancelar";
             BtbCancelar.Size = new Size(168, 52);
-            BtbCancelar.TabIndex = 7;
+            BtbCancelar.TabIndex = 4;
             BtbCancelar.Text = "Cancelar";
             BtbCancelar.UseVisualStyleBackColor = false;
             BtbCancelar.Click += BtbCancelar_Click;
@@ -118,7 +118,7 @@
             BtnSalvar.Margin = new Padding(3, 5, 3, 5);
             BtnSalvar.Name = "BtnSalvar";
             BtnSalvar.Size = new Size(168, 52);
-            BtnSalvar.TabIndex = 8;
+            BtnSalvar.TabIndex = 5;
             BtnSalvar.Text = "Salvar";
             BtnSalvar.UseVisualStyleBackColor = false;
             BtnSalvar.Click += BtnSalvar_Click;
@@ -150,7 +150,7 @@
             txtDescricao.Location = new Point(15, 141);
             txtDescricao.Name = "txtDescricao";
             txtDescricao.Size = new Size(465, 97);
-            txtDescricao.TabIndex = 10;
+            txtDescricao.TabIndex = 1;
             txtDescricao.Text = "";
             // 
             // txtPreco
@@ -158,7 +158,7 @@
             txtPreco.Location = new Point(15, 276);
             txtPreco.Name = "txtPreco";
             txtPreco.Size = new Size(465, 39);
-            txtPreco.TabIndex = 9;
+            txtPreco.TabIndex = 2;
             txtPreco.TextChanged += txtPreco_TextChanged;
             // 
             // txtTitulo
@@ -166,7 +166,7 @@
             txtTitulo.Location = new Point(15, 63);
             txtTitulo.Name = "txtTitulo";
             txtTitulo.Size = new Size(465, 39);
-            txtTitulo.TabIndex = 7;
+            txtTitulo.TabIndex = 0;
             txtTitulo.TextChanged += txtTitulo_TextChanged;
             // 
             // chkPossiuPreparo
@@ -175,7 +175,7 @@
             chkPossiuPreparo.Location = new Point(15, 345);
             chkPossiuPreparo.Name = "chkPossiuPreparo";
             chkPossiuPreparo.Size = new Size(207, 36);
-            chkPossiuPreparo.TabIndex = 6;
+            chkPossiuPreparo.TabIndex = 3;
             chkPossiuPreparo.Text = "Possui preparo?";
             chkPossiuPreparo.UseVisualStyleBackColor = true;
             chkPossiuPreparo.CheckedChanged += checkBox1_CheckedChanged;

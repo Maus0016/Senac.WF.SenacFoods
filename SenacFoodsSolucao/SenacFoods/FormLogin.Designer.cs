@@ -102,7 +102,7 @@
             txtSenha.Location = new Point(119, 151);
             txtSenha.Name = "txtSenha";
             txtSenha.Size = new Size(415, 40);
-            txtSenha.TabIndex = 0;
+            txtSenha.TabIndex = 1;
             txtSenha.Text = "SENHA:";
             // 
             // txtLogin

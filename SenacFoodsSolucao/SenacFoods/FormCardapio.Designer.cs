@@ -68,7 +68,7 @@
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.Size = new Size(1179, 376);
-            dataGridView1.TabIndex = 3;
+            dataGridView1.TabIndex = 2;
             dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // BtnEditar
@@ -80,7 +80,7 @@
             BtnEditar.Margin = new Padding(3, 5, 3, 5);
             BtnEditar.Name = "BtnEditar";
             BtnEditar.Size = new Size(168, 52);
-            BtnEditar.TabIndex = 2;
+            BtnEditar.TabIndex = 4;
             BtnEditar.Text = "Editar";
             BtnEditar.UseVisualStyleBackColor = false;
             BtnEditar.Click += BtnEditar_Click;
@@ -105,7 +105,7 @@
             BtnExcluir.Margin = new Padding(3, 5, 3, 5);
             BtnExcluir.Name = "BtnExcluir";
             BtnExcluir.Size = new Size(168, 52);
-            BtnExcluir.TabIndex = 1;
+            BtnExcluir.TabIndex = 3;
             BtnExcluir.Text = "Excluir";
             BtnExcluir.UseVisualStyleBackColor = false;
             BtnExcluir.Click += BtnExcluir_Click;
@@ -126,7 +126,7 @@
             TxtPesquisa.Margin = new Padding(3, 5, 3, 5);
             TxtPesquisa.Name = "TxtPesquisa";
             TxtPesquisa.Size = new Size(697, 45);
-            TxtPesquisa.TabIndex = 2;
+            TxtPesquisa.TabIndex = 0;
             TxtPesquisa.TextChanged += TxtPesquisa_TextChanged;
             // 
             // button4

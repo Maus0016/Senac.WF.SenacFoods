@@ -65,7 +65,7 @@
             btnMesa.Location = new Point(618, 43);
             btnMesa.Name = "btnMesa";
             btnMesa.Size = new Size(112, 80);
-            btnMesa.TabIndex = 0;
+            btnMesa.TabIndex = 4;
             btnMesa.Text = "Mesa";
             btnMesa.UseVisualStyleBackColor = false;
             btnMesa.Click += btnMesa_Click;
@@ -80,7 +80,7 @@
             btnUsuarios.Location = new Point(479, 43);
             btnUsuarios.Name = "btnUsuarios";
             btnUsuarios.Size = new Size(112, 80);
-            btnUsuarios.TabIndex = 0;
+            btnUsuarios.TabIndex = 3;
             btnUsuarios.Text = "Usuarios";
             btnUsuarios.UseVisualStyleBackColor = false;
             btnUsuarios.Click += btnUsuarios_Click;
@@ -95,7 +95,7 @@
             btnPedidoCozinha.Location = new Point(335, 43);
             btnPedidoCozinha.Name = "btnPedidoCozinha";
             btnPedidoCozinha.Size = new Size(112, 80);
-            btnPedidoCozinha.TabIndex = 0;
+            btnPedidoCozinha.TabIndex = 2;
             btnPedidoCozinha.Text = "Pedido Cozinha";
             btnPedidoCozinha.UseVisualStyleBackColor = false;
             btnPedidoCozinha.Click += btnPedidoCozinha_Click;
@@ -110,7 +110,7 @@
             btnComanda.Location = new Point(195, 43);
             btnComanda.Name = "btnComanda";
             btnComanda.Size = new Size(112, 80);
-            btnComanda.TabIndex = 0;
+            btnComanda.TabIndex = 1;
             btnComanda.Text = "Comanda";
             btnComanda.UseVisualStyleBackColor = false;
             btnComanda.Click += btnComanda_Click;
@@ -138,7 +138,7 @@
             btnFechar.Location = new Point(922, 28);
             btnFechar.Name = "btnFechar";
             btnFechar.Size = new Size(39, 34);
-            btnFechar.TabIndex = 1;
+            btnFechar.TabIndex = 6;
             btnFechar.Text = "X";
             btnFechar.UseVisualStyleBackColor = false;
             btnFechar.Click += btnFechar_Click;
@@ -151,7 +151,7 @@
             btnMinimizar.Location = new Point(864, 28);
             btnMinimizar.Name = "btnMinimizar";
             btnMinimizar.Size = new Size(39, 34);
-            btnMinimizar.TabIndex = 1;
+            btnMinimizar.TabIndex = 5;
             btnMinimizar.Text = "___";
             btnMinimizar.UseVisualStyleBackColor = false;
             btnMinimizar.Click += btnMinimizar_Click;
@@ -167,7 +167,6 @@
             lblMensagem.Size = new Size(214, 36);
             lblMensagem.TabIndex = 2;
             lblMensagem.Text = "lblMensagem";
-            
             // 
             // FormPrincipal
             // 
